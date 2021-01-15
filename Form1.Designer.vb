@@ -62,7 +62,7 @@ Partial Class Form1
         '
         'Label3
         '
-        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.Label3.Location = New System.Drawing.Point(42, 377)
@@ -73,7 +73,7 @@ Partial Class Form1
         '
         'tbOutput
         '
-        Me.tbOutput.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tbOutput.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.tbOutput.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.tbOutput.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.tbOutput.Location = New System.Drawing.Point(47, 409)
@@ -97,6 +97,7 @@ Partial Class Form1
         '
         'rbPriklady
         '
+        Me.rbPriklady.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.rbPriklady.AutoSize = True
         Me.rbPriklady.Location = New System.Drawing.Point(714, 65)
         Me.rbPriklady.Name = "rbPriklady"
@@ -108,6 +109,7 @@ Partial Class Form1
         '
         'rbNasobilka
         '
+        Me.rbNasobilka.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.rbNasobilka.AutoSize = True
         Me.rbNasobilka.Location = New System.Drawing.Point(544, 65)
         Me.rbNasobilka.Name = "rbNasobilka"
@@ -119,6 +121,7 @@ Partial Class Form1
         '
         'Label1
         '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.Label1.Location = New System.Drawing.Point(539, 23)
@@ -129,6 +132,7 @@ Partial Class Form1
         '
         'gbNasobilka
         '
+        Me.gbNasobilka.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.gbNasobilka.Controls.Add(Me.Label5)
         Me.gbNasobilka.Controls.Add(Me.Label4)
         Me.gbNasobilka.Controls.Add(Me.tbVysledekNasobilka)
@@ -191,6 +195,7 @@ Partial Class Form1
         '
         'gbPriklad
         '
+        Me.gbPriklad.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.gbPriklad.Controls.Add(Me.tbVysledekPriklad)
         Me.gbPriklad.Controls.Add(Me.tbPriklad)
         Me.gbPriklad.Controls.Add(Me.Label7)
@@ -252,6 +257,7 @@ Partial Class Form1
         '
         'Label8
         '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.Label8.Location = New System.Drawing.Point(47, 313)
@@ -262,6 +268,7 @@ Partial Class Form1
         '
         'tbError
         '
+        Me.tbError.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.tbError.ForeColor = System.Drawing.Color.Red
         Me.tbError.Location = New System.Drawing.Point(230, 313)
         Me.tbError.Name = "tbError"

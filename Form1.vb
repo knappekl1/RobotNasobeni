@@ -32,7 +32,7 @@
         gbNasobilka.Hide()
         gbPriklad.Show()
 
-        soucinitel1 = CInt(Math.Ceiling(Rnd() * 9)) + 1
+        soucinitel1 = CInt(Math.Ceiling(Rnd() * 8)) + 1
         soucinitel2 = CInt(Math.Ceiling(Rnd() * 9)) + 1
         soucin = soucinitel1 * soucinitel2
         tbPriklad.Text = soucinitel1 & " x " & soucinitel2 & " ="
@@ -99,7 +99,7 @@
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         If prikladyRadio Then
-            soucinitel1 = CInt(Math.Ceiling(Rnd() * 9)) + 1
+            soucinitel1 = CInt(Math.Ceiling(Rnd() * 8)) + 1
             soucinitel2 = CInt(Math.Ceiling(Rnd() * 9)) + 1
             soucin = soucinitel1 * soucinitel2
             tbPriklad.Text = soucinitel1 & " x " & soucinitel2 & " ="
@@ -107,11 +107,13 @@
             tbVysledekPriklad.Clear()
             tbVysledekPriklad.Focus()
         ElseIf NasobilkaRadio Then
-            cisloNasobilka = CInt(Math.Ceiling(Rnd() * 9)) + 1
+            cisloNasobilka = CInt(Math.Ceiling(Rnd() * 8)) + 1
             tbNasobilkaCislo.Text = cisloNasobilka
             tbOutput.Clear()
             tbVysledekNasobilka.Clear()
             tbVysledekNasobilka.Focus()
         End If
     End Sub
+
+
 End Class
