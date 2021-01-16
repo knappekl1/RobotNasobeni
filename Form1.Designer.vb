@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -44,6 +45,9 @@ Partial Class Form1
         Me.btnNext = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.tbError = New System.Windows.Forms.TextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.tbTimer = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbNasobilka.SuspendLayout()
         Me.gbPriklad.SuspendLayout()
@@ -99,9 +103,9 @@ Partial Class Form1
         '
         Me.rbPriklady.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.rbPriklady.AutoSize = True
-        Me.rbPriklady.Location = New System.Drawing.Point(714, 65)
+        Me.rbPriklady.Location = New System.Drawing.Point(733, 65)
         Me.rbPriklady.Name = "rbPriklady"
-        Me.rbPriklady.Size = New System.Drawing.Size(169, 24)
+        Me.rbPriklady.Size = New System.Drawing.Size(150, 20)
         Me.rbPriklady.TabIndex = 7
         Me.rbPriklady.TabStop = True
         Me.rbPriklady.Text = "Příklady z násobení"
@@ -111,9 +115,9 @@ Partial Class Form1
         '
         Me.rbNasobilka.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.rbNasobilka.AutoSize = True
-        Me.rbNasobilka.Location = New System.Drawing.Point(544, 65)
+        Me.rbNasobilka.Location = New System.Drawing.Point(558, 65)
         Me.rbNasobilka.Name = "rbNasobilka"
-        Me.rbNasobilka.Size = New System.Drawing.Size(150, 24)
+        Me.rbNasobilka.Size = New System.Drawing.Size(136, 20)
         Me.rbNasobilka.TabIndex = 7
         Me.rbNasobilka.TabStop = True
         Me.rbNasobilka.Text = "Násobilka v řadě"
@@ -272,15 +276,41 @@ Partial Class Form1
         Me.tbError.ForeColor = System.Drawing.Color.Red
         Me.tbError.Location = New System.Drawing.Point(230, 313)
         Me.tbError.Name = "tbError"
-        Me.tbError.Size = New System.Drawing.Size(71, 26)
+        Me.tbError.Size = New System.Drawing.Size(71, 22)
         Me.tbError.TabIndex = 12
         Me.tbError.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 1000
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Label9.Location = New System.Drawing.Point(168, 345)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(55, 29)
+        Me.Label9.TabIndex = 13
+        Me.Label9.Text = "Čas"
+        '
+        'tbTimer
+        '
+        Me.tbTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.tbTimer.Location = New System.Drawing.Point(230, 345)
+        Me.tbTimer.Name = "tbTimer"
+        Me.tbTimer.Size = New System.Drawing.Size(71, 30)
+        Me.tbTimer.TabIndex = 14
+        Me.tbTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1145, 634)
+        Me.Controls.Add(Me.tbTimer)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.tbError)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.gbPriklad)
@@ -327,4 +357,7 @@ Partial Class Form1
     Friend WithEvents btnNext As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents tbError As TextBox
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label9 As Label
+    Friend WithEvents tbTimer As TextBox
 End Class

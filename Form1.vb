@@ -7,12 +7,18 @@
     Dim cisloNasobilka As Integer
     Dim nasobilkaInput(-1) As String
     Dim errorCount As Integer = 0
+    Dim seconds As Integer
+    Dim targetTime As Integer = 15
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MessageBox.Show("Ahoj, já jsem robot Bela v počítači a vyzkouším tě z násobení")
         gbPriklad.Hide()
         gbNasobilka.Hide()
         tbError.Text = 0
+        Timer1.Stop()
+        tbTimer.Text = 15
+        tbTimer.ForeColor = Color.Black
+
 
     End Sub
     Private Sub rbNasobilka_CheckedChanged(sender As Object, e As EventArgs) Handles rbNasobilka.CheckedChanged
@@ -32,6 +38,10 @@
         gbNasobilka.Hide()
         gbPriklad.Show()
 
+        Timer1.Start()
+        tbTimer.ForeColor = Color.Black
+        tbTimer.Text = targetTime
+        seconds = 0
         soucinitel1 = CInt(Math.Ceiling(Rnd() * 8)) + 1
         soucinitel2 = CInt(Math.Ceiling(Rnd() * 9)) + 1
         soucin = soucinitel1 * soucinitel2
@@ -50,6 +60,7 @@
                 tbVysledekPriklad.Focus()
                 Return
             End If
+            Timer1.Stop()
             If vysledekInput = soucin Then
                 tbOutput.Text = "Výborně!" & vbCrLf & vysledekInput & " je správný výsledek!"
             Else
@@ -99,6 +110,10 @@
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         If prikladyRadio Then
+            Timer1.Start()
+            tbTimer.ForeColor = Color.Black
+            tbTimer.Text = targetTime
+            seconds = 0
             soucinitel1 = CInt(Math.Ceiling(Rnd() * 8)) + 1
             soucinitel2 = CInt(Math.Ceiling(Rnd() * 9)) + 1
             soucin = soucinitel1 * soucinitel2
@@ -115,5 +130,22 @@
         End If
     End Sub
 
-
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If seconds < targetTime Then
+            seconds += 1
+            tbTimer.Text = targetTime - seconds
+            If targetTime - seconds <= 5 Then
+                tbTimer.ForeColor = Color.Red
+            End If
+            Return
+        End If
+        My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Exclamation)
+        Timer1.Stop()
+        tbOutput.Clear()
+        tbVysledekPriklad.Clear()
+        tbVysledekPriklad.Focus()
+        errorCount += 1
+        tbOutput.Text = "Čas vypršel! Chyba!"
+        tbError.Text = errorCount
+    End Sub
 End Class
